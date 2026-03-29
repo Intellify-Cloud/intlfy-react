@@ -50,6 +50,7 @@ export const Navbar = () => {
   }
 
   const anonymousNav = [
+    { title: "Mission", to: "/#mission" },
     { title: "Services", to: "/#services" },
     { title: "Portfolio", to: "/portfolio" },
     { title: "Contact", to: "/contact-us" },

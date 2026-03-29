@@ -18,11 +18,47 @@ export const siteConfig = {
     },
     mission: {
       title: "Our Mission",
+      subtitle: " all in one solution",
+      highlight: "Grow faster with our",
       paragraphs: [
         "Welcome to Intellify! We understand that starting a website can be overwhelming, from setting up a domain to managing the high capital expenses associated with it. That's where we step in to make the process easy and hassle-free.",
         "Our primary mission is to empower small and medium-sized service-based businesses by providing a seamless introduction to the online world. We believe that building trust and a strong online presence are crucial for fostering growth and success.",
         "With our services, we cater to your specific needs. Set yourself apart using our affordable subscription model, which eliminates the heavy upfront costs of website setup and maintenance.",
         "Let Intellify help you on this exciting journey. Together, we'll unlock your business's full potential and start elevating your brand matter. Unlock the power of an online profile now!"
+      ],
+      features: [
+        {
+          icon: "Zap",
+          iconColor: "text-indigo-500",
+          label: "Easy Onboarding",
+          gradientFrom: "from-violet-400",
+          gradientTo: "to-indigo-400",
+          spanCols: "col-span-12 md:col-span-4"
+        },
+        {
+          icon: "Layers",
+          iconColor: "text-orange-500",
+          label: "Business Growth",
+          gradientFrom: "from-amber-400",
+          gradientTo: "to-orange-400",
+          spanCols: "col-span-12 md:col-span-8"
+        },
+        {
+          icon: "Shield",
+          iconColor: "text-emerald-500",
+          label: "Affordable Plans",
+          gradientFrom: "from-green-400",
+          gradientTo: "to-emerald-400",
+          spanCols: "col-span-12 md:col-span-8"
+        },
+        {
+          icon: "Sparkles",
+          iconColor: "text-red-500",
+          label: "Full Potential",
+          gradientFrom: "from-pink-400",
+          gradientTo: "to-red-400",
+          spanCols: "col-span-12 md:col-span-4"
+        }
       ]
     },
     portfolio: {

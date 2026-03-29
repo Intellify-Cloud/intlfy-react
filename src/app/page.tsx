@@ -21,7 +21,10 @@ export default function Home() {
       {toggles.showMission && (
         <Mission 
           title={home.mission.title}
+          highlight={home.mission.highlight}
+          subtitle={home.mission.subtitle}
           paragraphs={home.mission.paragraphs}
+          features={home.mission.features}
         />
       )}
 
