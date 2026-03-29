@@ -7,6 +7,11 @@ import { Menu, X, Sun, Moon, LogOut } from "lucide-react"
 import { useSessionStore } from "@/stores/useSessionStore"
 import Permissions from "@/permissions"
 
+function scrollToHash(hash: string) {
+  const el = document.getElementById(hash)
+  if (el) el.scrollIntoView({ behavior: "smooth" })
+}
+
 export const Navbar = () => {
   const router = useRouter()
   const pathname = usePathname()
@@ -17,7 +22,7 @@ export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem("app-theme") || "light"
+    const storedTheme = localStorage.getItem("app-theme") || "dark"
     setIsDarkTheme(storedTheme === "dark")
     if (storedTheme === "dark") {
       document.documentElement.classList.add("dark")
@@ -42,6 +47,32 @@ export const Navbar = () => {
     } else {
       document.documentElement.classList.remove("dark")
     }
+  }
+
+  // After navigating to / from another page, scroll to the pending hash
+  useEffect(() => {
+    const hash = window.location.hash.slice(1)
+    if (pathname === "/" && hash) {
+      // Small delay so the page has rendered before scrolling
+      const t = setTimeout(() => scrollToHash(hash), 80)
+      return () => clearTimeout(t)
+    }
+  }, [pathname])
+
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    setShowMobileMenu(false)
+    if (!href.startsWith("/#")) return
+
+    const hash = href.slice(2)
+
+    if (pathname === "/") {
+      e.preventDefault()
+      scrollToHash(hash)
+    }
+    // else: let Next.js navigate to / and the useEffect above will scroll
   }
 
   const handleSignOut = () => {
@@ -91,9 +122,10 @@ export const Navbar = () => {
               <Link
                 key={item.title}
                 href={item.to}
+                onClick={(e) => handleNavClick(e, item.to)}
                 className={`text-[15px] font-semibold transition-colors duration-200 ${
-                  pathname === item.to 
-                    ? "text-orange-600 dark:text-orange-500" 
+                  pathname === item.to
+                    ? "text-orange-600 dark:text-orange-500"
                     : "text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"
                 }`}
               >
@@ -150,7 +182,7 @@ export const Navbar = () => {
               <Link
                 key={item.title}
                 href={item.to}
-                onClick={() => setShowMobileMenu(false)}
+                onClick={(e) => handleNavClick(e, item.to)}
                 className="flex items-center px-4 py-3 text-[15px] font-semibold text-gray-800 dark:text-gray-200 rounded-xl hover:bg-orange-50 dark:hover:bg-orange-900/20 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
               >
                 {item.title}

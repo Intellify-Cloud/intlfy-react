@@ -14,7 +14,7 @@ interface PricingFeaturesProps {
 
 export const PricingFeatures = ({ data }: PricingFeaturesProps) => {
   return (
-    <div className="bg-gray-50 dark:bg-neutral-900/30 w-full overflow-hidden border-b border-gray-100 dark:border-neutral-900">
+    <div id="services" className="bg-gray-50 dark:bg-neutral-900/30 w-full overflow-hidden border-b border-gray-100 dark:border-neutral-900">
       
       {/* Top Banner - The Pricing Callout */}
       <div className="pt-24 px-6 container mx-auto max-w-5xl">
