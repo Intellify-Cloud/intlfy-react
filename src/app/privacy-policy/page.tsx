@@ -1,3 +1,17 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "Intellify's Privacy Policy — how we collect, use, and protect your personal information.",
+  alternates: {
+    canonical: "https://www.intellify.co.za/privacy-policy",
+  },
+  robots: {
+    index: true,
+    follow: false,
+  },
+};
+
 export default function PrivacyPolicyPage() {
   return (
     <div className="mt-32 w-full max-w-4xl mx-auto px-4 py-12">

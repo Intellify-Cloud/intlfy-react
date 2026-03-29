@@ -1,5 +1,18 @@
+import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { Hero } from "@/components/home/Hero";
+
+export const metadata: Metadata = {
+  title: "Intellify — Go Online. Grow Online.",
+  description:
+    "Intellify helps South African small businesses establish a professional online presence with fully managed portfolio websites from R249/month. Domain, hosting, and updates included.",
+  alternates: {
+    canonical: "https://www.intellify.co.za",
+  },
+  openGraph: {
+    url: "https://www.intellify.co.za",
+  },
+};
 import { Mission } from "@/components/home/Mission";
 import { PricingFeatures } from "@/components/home/PricingFeatures";
 import { Portfolio } from "@/components/home/Portfolio";
