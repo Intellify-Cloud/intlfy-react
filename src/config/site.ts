@@ -6,8 +6,8 @@ export const siteConfig = {
   toggles: {
     showHero: true,
     showMission: true,
-    showPortfolio: true,
     showPricingFeatures: true,
+    showPortfolio: true,
   },
   home: {
     hero: {

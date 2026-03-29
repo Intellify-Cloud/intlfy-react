@@ -28,16 +28,16 @@ export default function Home() {
         />
       )}
 
+      {toggles.showPricingFeatures && (
+        <PricingFeatures
+          data={home.pricingFeatures}
+        />
+      )}
+
       {toggles.showPortfolio && (
         <Portfolio 
           title={home.portfolio.title}
           sites={home.portfolio.sites}
-        />
-      )}
-
-      {toggles.showPricingFeatures && (
-        <PricingFeatures
-          data={home.pricingFeatures}
         />
       )}
     </div>
