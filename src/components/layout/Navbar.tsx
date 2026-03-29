@@ -143,14 +143,7 @@ export const Navbar = () => {
               {isDarkTheme ? <Moon className="w-4.5 h-4.5" /> : <Sun className="w-4.5 h-4.5" />}
             </button>
 
-            {!isAuthenticated ? (
-              <Link
-                href="/sign-in"
-                className="hidden md:flex items-center justify-center h-[38px] px-5 bg-orange-600 text-white text-[15px] font-semibold rounded-full shadow-sm hover:-translate-y-0.5 hover:shadow-md hover:bg-orange-500 transition-all duration-200"
-              >
-                Sign In
-              </Link>
-            ) : (
+            {!isAuthenticated ? null : (
               <button
                 onClick={handleSignOut}
                 title={`Sign out ${identityName}`}
@@ -188,16 +181,6 @@ export const Navbar = () => {
                 {item.title}
               </Link>
             ))}
-            <div className="h-px w-full bg-gray-100 dark:bg-neutral-800 my-2"></div>
-            {!isAuthenticated && (
-              <Link
-                href="/sign-in"
-                onClick={() => setShowMobileMenu(false)}
-                className="flex items-center justify-center w-full px-4 py-3 text-[15px] font-semibold text-white bg-orange-600 rounded-xl shadow-sm"
-              >
-                Sign In
-              </Link>
-            )}
           </div>
         </div>
       )}
