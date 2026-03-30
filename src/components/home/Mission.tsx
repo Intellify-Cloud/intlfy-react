@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Zap, Shield, Sparkles, Layers, LucideIcon } from "lucide-react"
-import { SiteConfig } from "@/config/site"
+import { SiteConfig } from "@/data/site"
 
 const iconMap: Record<string, LucideIcon> = {
   Zap,

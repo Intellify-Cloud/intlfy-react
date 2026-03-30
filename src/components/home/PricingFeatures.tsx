@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { CheckCircle2, ArrowRight, Globe, MonitorSmartphone, Gauge, LucideIcon } from "lucide-react"
-import { SiteConfig } from "@/config/site"
+import { SiteConfig } from "@/data/site"
 
 const iconMap: Record<string, LucideIcon> = {
   Globe,

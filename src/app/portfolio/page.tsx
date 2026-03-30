@@ -2,10 +2,10 @@
 
 import { CheckCircle2, Quote } from "lucide-react"
 import Link from "next/link"
-import { siteConfig } from "@/config/site"
+import { site } from "@/data/site"
 
 export default function PortfolioPage() {
-  const { header, plan, featuresHeader, features, quote } = siteConfig.portfolioPage
+  const { header, plan, featuresHeader, features, quote } = site.portfolioPage
 
   return (
     <div className="w-full bg-gray-50 dark:bg-black min-h-screen pt-32 pb-24">
