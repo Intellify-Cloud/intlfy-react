@@ -99,7 +99,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} antialiased h-full scroll-smooth`} suppressHydrationWarning>
+    <html lang="en" className={`${outfit.variable} antialiased h-full scroll-smooth`} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
