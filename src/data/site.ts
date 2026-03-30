@@ -13,10 +13,31 @@ export const site = {
 
   hero: {
     show: true,
-    subtitle: "Reach more customers",
+    subtitle: "Your business deserves to be found",
     title: "Go Online. Grow Online.",
-    buttonText: "Contact Us Today",
+    body: "A professional website works for you 24/7 — generating leads, building trust, and turning browsers into paying customers. Your competitors are already online.",
+    buttonText: "Get Your Site Today",
     backgroundImage: "/assets/hero/home.jpg",
+    marqueeRow1: [
+      "24/7 Availability",
+      "Lead Generation",
+      "SEO Optimized",
+      "Mobile-Friendly",
+      "Google Ranking",
+      "Custom Design",
+      "Competitive Advantage",
+      "Local Search",
+    ],
+    marqueeRow2: [
+      "Trust & Credibility",
+      "Brand Exposure",
+      "Social Media",
+      "Email Marketing",
+      "Booking Forms",
+      "Testimonials",
+      "Digital Investment",
+      "Sales Growth",
+    ],
   },
 
   mission: {

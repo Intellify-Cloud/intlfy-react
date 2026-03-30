@@ -6,12 +6,14 @@ import { site } from "@/data/site"
 export const Hero = () => {
   if (!site.hero.show) return null
 
-  const { subtitle, title, buttonText } = site.hero
+  const { subtitle, buttonText, body, marqueeRow1, marqueeRow2 } = site.hero
+  const pills = [...marqueeRow1, ...marqueeRow2].slice(0, 9)
 
   return (
     <BeamsBackground className="min-h-[90vh]">
       <div className="min-h-[90vh] flex items-center justify-center pt-24 pb-12">
         <div className="container relative mx-auto px-6 flex flex-col items-center justify-center text-center max-w-5xl">
+
           <div className="inline-flex items-center px-3 py-1 mb-8 text-sm font-medium text-orange-500 bg-orange-500/10 rounded-full ring-1 ring-inset ring-orange-500/30 dark:text-orange-400 dark:bg-orange-500/10 dark:ring-orange-500/30">
             {subtitle}
           </div>
@@ -28,10 +30,20 @@ export const Hero = () => {
             </span>
           </h1>
 
-          <p className="max-w-2xl mb-10 text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
-            The internet, mobile phones, social media and search engines have
-            changed marketing in a fundamental way. Don&apos;t lose business.
+          <p className="max-w-2xl mb-8 text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
+            {body}
           </p>
+
+          <div className="flex flex-wrap justify-center gap-2 max-w-2xl mb-10">
+            {pills.map((pill) => (
+              <span
+                key={pill}
+                className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/70 dark:bg-white/5 text-gray-600 dark:text-gray-400 border border-gray-200 dark:border-white/10 whitespace-nowrap"
+              >
+                {pill}
+              </span>
+            ))}
+          </div>
 
           <Link
             href="/contact-us"
@@ -40,6 +52,7 @@ export const Hero = () => {
             {buttonText}
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
+
         </div>
       </div>
     </BeamsBackground>
