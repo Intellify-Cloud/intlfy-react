@@ -14,7 +14,7 @@ export const siteConfig = {
       subtitle: "Reach more customers",
       title: "Go Online. Grow Online.",
       buttonText: "Contact Us Today",
-      backgroundImage: "/home.jpg"
+      backgroundImage: "/assets/hero/home.jpg"
     },
     mission: {
       title: "Our Mission",

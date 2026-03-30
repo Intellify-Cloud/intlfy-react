@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { site } from "@/data/site";
 
-const WHATSAPP_NUMBER = "27829579336";
+const WHATSAPP_NUMBER = site.whatsapp;
 
 export function FloatingActions() {
   const [showTop, setShowTop] = useState(false);

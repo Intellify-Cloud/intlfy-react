@@ -15,6 +15,11 @@ const BASE_URL = "https://www.intellify.co.za";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
+  icons: {
+    icon: "/assets/brand/favicon.png",
+    shortcut: "/assets/brand/favicon.png",
+    apple: "/assets/brand/favicon.png",
+  },
   title: {
     default: "Intellify — Go Online. Grow Online.",
     template: "%s | Intellify",
@@ -57,7 +62,7 @@ export const metadata: Metadata = {
       "Fully managed portfolio websites for South African businesses. From R249/month — domain, hosting, and code management included.",
     images: [
       {
-        url: "/home.jpg",
+        url: "/assets/social/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Intellify — Go Online. Grow Online.",
@@ -69,7 +74,7 @@ export const metadata: Metadata = {
     title: "Intellify — Go Online. Grow Online.",
     description:
       "Fully managed portfolio websites for South African businesses. From R249/month — no upfront costs.",
-    images: ["/home.jpg"],
+    images: ["/assets/social/og-image.jpg"],
   },
 };
 
@@ -78,7 +83,7 @@ const organizationSchema = {
   "@type": "Organization",
   name: "Intellify",
   url: BASE_URL,
-  logo: `${BASE_URL}/favicon.ico`,
+  logo: `${BASE_URL}/assets/brand/favicon.png`,
   description:
     "Intellify helps small and medium-sized service-based businesses go online with fully managed, affordable portfolio websites.",
   contactPoint: {

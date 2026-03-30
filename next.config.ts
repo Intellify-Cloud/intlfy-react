@@ -9,6 +9,12 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  experimental: {
+    // Tree-shake barrel files so Webpack only compiles icons/components you actually use
+    optimizePackageImports: ["lucide-react", "framer-motion"],
+    // Cache Server Component fetch responses across HMR refreshes
+    serverComponentsHmrCache: true,
+  },
 };
 
 export default nextConfig;
